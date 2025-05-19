@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag e Drop API</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="arrastar.js" defer></script>
+    <script src="todo.js" defer></script>
+  </head>
+  <body>
+    <div class="board">
+      <form id="todo-form">
+        <input type="text" placeholder="Nova Tarefa..." id="todo-input" />
+        <button type="submit">Adicionar +</button>
+        <div id="lixeira">Excluir</div>
+      </form>
+
+      <script src="script.js"></script>
+
+      <div class="lanes">
+        <div class="swim-lane" id="todo-lane">
+          <h3 class="heading">Tudo</h3>
+          <p class="task" draggable="true">Verificar e responder e-mails</p>
+          <p class="task" draggable="true">Fazer 30 minutos de atividade física</p>
+          <p class="task" draggable="true">Organizar o ambiente de trabalho</p>
+        </div>
+        <div class="swim-lane">
+          <h3 class="heading">Fazendo</h3>
+          <p class="task" draggable="true">Ler 20 páginas de um livro</p>
+        </div>
+        <div class="swim-lane">
+          <h3 class="heading">Feito</h3>
+          <p class="task" draggable="true">Tomar café da manhã saudável</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
