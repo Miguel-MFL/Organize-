@@ -1,13 +1,17 @@
-const draggables = document.querySelectorAll(".task");
 const droppables = document.querySelectorAll(".swim-lane");
 
-draggables.forEach((task) => {
+function attachDragListeners(task) {
   task.addEventListener("dragstart", () => {
     task.classList.add("is-dragging");
   });
   task.addEventListener("dragend", () => {
     task.classList.remove("is-dragging");
   });
+}
+
+const draggables = document.querySelectorAll(".task");
+draggables.forEach((task) => {
+  attachDragListeners(task);
 });
 
 droppables.forEach((zone) => {
@@ -44,3 +48,18 @@ const insertAboveTask = (zone, mouseY) => {
 
   return closestTask;
 };
+function attachDragListeners(task) {
+  task.setAttribute("draggable", "true");
+
+  task.addEventListener("dragstart", () => {
+    task.classList.add("is-dragging");
+    window.elementoArrastado = task;
+  });
+
+  task.addEventListener("dragend", () => {
+    task.classList.remove("is-dragging");
+    window.elementoArrastado = null;
+  });
+}
+
+window.attachDragListeners = attachDragListeners;
