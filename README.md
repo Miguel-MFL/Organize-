@@ -24,15 +24,6 @@ CSS3 (Flexbox, Transições)
 
 JavaScript (Drag and Drop API)
 
-## Personalização
-Você pode facilmente personalizar:
-
-Cores no arquivo estilos.css
-
-Número e nomes das colunas no index.html
-
-Efeitos de arrasto modificando as classes .is-dragging e .hover
-
 ## Requisitos
 Navegador moderno com suporte a:
 
